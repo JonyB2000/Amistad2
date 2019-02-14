@@ -1,0 +1,48 @@
+var x = 200;
+var vx = 25;
+var y = 200;
+var vy = 5;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  mostrar(0,0,255,90);
+	moverY();
+	botarY();
+	moverX();
+	botarX();
+}
+
+function mostrar(R,G,B, tam){
+	fill(R,G,B);
+	ellipse(x,y,tam,tam);//muetra el circulo//
+}
+
+function moverY(){
+	y = y+vy;//Mover//
+}
+ function botarY(){
+	if(y < 25){
+		vy = vy*-1;
+}
+	if(y > 375){
+	vy = vy*-1;
+	} 
+}
+
+
+
+function moverX(){
+	x = x+vx;//Mover//
+}
+ function botarX(){
+	if(x < 25){
+		vx = vx*-1;
+}
+	if(x > 375){
+	vx = vy*1;
+	} 
+}
